@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- internal css -->
+        <style>
+            /* syntax:
+            selector{
+                property 2: value;
+                property 2: value;
+
+            } */
+            h1{  /* this is the elementor selector*/
+                color: rgb(13, 255, 0);
+                margin: 20px 30px;
+                margin: 40px 60px;
+                margin: 40px 60px;
+
+                padding: 20px 30px 40px 50px;
+             
+                border: 60px solid black;
+                syntax: for shortand property
+                /* margin:top right bottom left-clockwise direction */
+             
+            }
+            p{  /* this is the elementor selector*/
+                color: rgb(255);
+            }
+            table,h1, p{
+                border-style: double;   /*solid, dashed,dotted,double,grove,ridge*/
+                border-width: 20px;
+                border-color: rgb(red, green, blue);
+                /* shortend property*/
+                /*syntax: border:  width style color;*/
+                border: 5px solid green;
+                border-radius: 20px;
+                border-right: 10px solid rgb(25, 4, 4);
+                border-left: 10px solid rgb(25, 4, 4);
+                border-top: 10px solid rgb(25, 4, 4);
+                border-bottom: 10px solid rgb(25, 4, 4);
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-collapse: collapse;
+                
+
+            }
+            th{
+                background-color: rgb(74, 74, 74);
+                color: white;
+                border: 15px solid rgb(250, 100, 74);
+                background-color: orange;
+                border-collapse: collapse;
+            }
+            td{
+                /*color:black
+                color(srgb red green blue) rgb(77, 0, 44);
+                */
+                color: rgba(255,0,0);
+                border: 1px solid rgb(250, 100, 74);
+                background-color: rgb(137, 121, 132);
+                border-collapse: collapse;
+            
+            }
+        </style>
+    </head>
+    <body>
+        <!-- /there are 3 types of css in web development -->
+        <!-- inertnal css, external css, and inline css -->
+        <h1>This is a heading</h1>
+        <h1>this is the second heading </h1>
+        <p>this is a paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa in, ea consequatur, officia
+            non, suscipit asperiores molestias libero iusto voluptatum ipsa natus quae. Pariatur cum ut quis repellendus nam voluptate.</p>
+        <!-- we have different kind of selector in css -->
+        <!-- they are 1]Elementor selector,class selector, ID selector -->
+        <!-- Elementor selector includes all HTML tags  -->
+            <table>
+                <tr>
+                    <th>heading 1</th>
+                    <th>heading 2</th>
+                    <th>heading 3</th>
+                    <th>heading 4</th>
+                    <th>heading 5</th>
+                    <th>heading 6</th>
+                </tr>
+                <tr>
+                    <td>Table data 1 </td>
+                    <td>Table data 2 </td>
+                    <td>Table data 3 </td>
+                    <td>Table data 4 </td>
+                    <td>Table data 5 </td>
+                    <td>Table data 6 </td>
+                </tr>
+                <tr>
+                    <td>Table data 3 </td>
+                    <td>Table data 3 </td>
+                    <td>Table data 3 </td>
+                    <td>Table data 3 </td>
+                    <td>Table data 3 </td>
+                    <td>Table data 3 </td>
+                </tr>
+            
+            </table>
+
+    </body>
+</html>
