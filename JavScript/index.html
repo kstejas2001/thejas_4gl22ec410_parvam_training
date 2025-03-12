@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*This is the CSS Comment*/
+    </style>
+</head>
+<body>
+    <!-- Thejas KS
+    Pascal Case - ThejasKs
+    Camel Case - thejasKs
+    Snake Case - thejas_ks -->
+
+    <!--This is HTML Comment-->
+    <script>
+       //   This is a JavaScript Comment 
+       //   Declaring a Variable in JS
+       //   Primitive Data type includes: string, Number, Boolean, Undefined &
+       var firstName;
+       firstName = "Thejas";
+       console.log(firstName);
+       console.log(typeof(firstName));
+
+       var lastName;
+       lastName = "K S";
+       console.log(lastName);
+       console.log(typeof(lastName));
+
+       var age = 23;
+       console.log(age)
+       console.log(typeof(age));
+
+       var percent = 83.5;
+       console.log(percent);
+       console.log(typeof(percent));
+
+       var isIndian = true;
+       console.log(isIndian);
+       console.log(typeof(isIndian));
+
+       var isEngineer;
+       console.log(isEngineer);
+
+       var isEmployee;
+       console.log(isEmployee);
+
+       console.log("My name is " + firstName + " " + lastName + ". And i'm " + age + " years old legend.")
+    //    Using template Literals
+    console.log(`My name is ${firstName} ${lastName}. And i'm ${age} years old legend.`);
+
+    // Non-primitive Data Types includes: Objects & Arrays
+    var person ={
+        name : "Thejas K S",
+        age: 23,
+        gender: "Male",
+        company: "ParvaM Software Solutions"
+    };
+    console.log(person);
+    console.log(typeof(person));
+
+    var evenNumbers = [2, 4, 6, 8, 10];
+    console.log(evenNumbers);
+    console.log(typeof(evenNumbers));
+
+    // Operator in JS:
+    // Arthmetic Operators: +,-,*,/,%,**
+    var op1 = 10, op2 = 20;
+    var sum = op1 + op2;
+    var diff = op1 - op2;
+    var prod = op1 * op2;
+    var quot = op2 / op1;
+    var rem = op1 % op2;
+    var pow = op1 ** 5;
+    console.log("This arthmetic operations are as follows:");
+    console.log(`Sum of ${op1} & ${op2}: ${sum}`);
+    console.log(`difference of ${op1} & ${op2}: ${diff}`);
+    console.log(`product of ${op1} & ${op2}: ${prod}`);
+    console.log(`Quotient of ${op1} & ${op2}: ${quot}`);
+    console.log(`Modulos or Remainder of ${op1} & ${op2}: ${rem}`);
+    console.log(`Exponential of ${op1} to the power of 5: ${pow}`);
+
+    //Assignment Opertors: =, +=, -=, *=, /=
+    var a;
+    console.log(`Assingnment for the variable a: ${a = 5}`);
+    console.log(`sum & Assingnment: ${sum += op1}`);
+    console.log(`Difference & Assingnment: ${diff -= op1}`);
+    console.log(`Product & Assingnment: ${prod *= op1}`);
+    console.log(`Quotient & Assingnment: ${quot /= op1}`);
+
+    //Realtional or Comparison Operators: >, <, >=, <=, ==, !=, ===
+    var x = 10, y = 20, z = 20, s='20';
+    console.log(`${x} is lesser than ${y}: ${x < y}`);
+    console.log(`${y} is greater than ${x}: ${y > x}`);
+    console.log(`${x} is lesser than or equal to ${y}: ${x <= y}`);
+    console.log(`${y} is greater than or equal to ${x}: ${y >= x}`);
+    console.log(`${y} is equal to ${z}: ${y == z}`);
+    console.log(`${x} is not equal to ${y}: ${x != y}`);
+    console.log(`${x} is equal to ${s}: ${y != s}`);
+    console.log(`${x} is strickly equal to ${s}: ${y != s}. it is false, because y is ${typeof(y)} and s is ${typeof(s)}.`);
+
+    //Logical Operatons: AND(&&), OR(||), NOT(!)
+    var isIndian = true;
+    var isForeigner = false;
+    var isAdult = true;
+    var isMinor = false;
+
+    console.log(`the person can Vote: ${isIndian && isAdult}`)
+    console.log(`the person can Vote: ${isIndian && isMinor}`)
+    console.log(`the person can Vote: ${isIndian || isAdult}`)
+    console.log(`the person can Vote: ${isIndian || isMinor}`)
+    console.log(`the person can Vote: ${isIndian && (!isForeigner)}`)
+    console.log(`the person can Vote: ${isIndian && (!isMinor)}`)
+
+    // truth table
+    // AND GATE:    OR:
+    // A B Y        A B Y   A Y
+    // 0 0 0        0 0 0   0 1
+    // 0 1 0        0 1 1   1 0
+    // 1 0 0        1 0 1 
+    // 1 1 1        1 1 1
+
+    // Increment and decrement Operator: ++, --
+    var count = 1;
+    console.log(count);
+    // Pre-Decrement and pre-Increment
+    console.log(++count);
+    console.log(count);
+    console.log(--count);
+    console.log(count);
+    console.log('------');
+    // Post-Decrement and Post-Increment
+    console.log(count++);
+    console.log(count);
+    console.log(count--);
+    console.log(count);
+
+
+    </script>
+</body>
+</html>
