@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num= 10;
+        // Syntax: for(Initialiation; Condition; Increment/Decrement)
+        for(var i = 0; i<num; i++){
+            console.log("JavaScript");
+        }
+        // Print first 10 whole Numbers
+        for(var i = 0; i<num; i++){
+            console.log(`${i}`);
+        }
+        // Print first 10 narural Numbers
+        for(var i = 0; i<=num; i++){
+            console.log(`${i}`);
+        }
+        // Print first 10 multiple of 2
+        for(var i = 1; i<=num; i++){
+            console.log(`2 x ${i} = ${2*i}`);
+        }
+        // Print first 10 odd numbers
+        var limit = 20;
+        for(var i = 1; i<=limit; i++){
+            if(i%2 != 0){
+            console.log(`${i}`);
+            }
+        }
+        // Print 1 to 10 tables
+        for(var i=1; i<=num; i++){
+            for(var j=1; j<=num; j++){
+                console.log(`${i} x ${j} = ${i*j}`);
+            }
+        }
+
+        limit = 5;
+        for(var i=1; i<limit; i++){
+            if(i%2 != 0){
+                console.log(`${i}`);
+            }
+        }
+
+        var i = 1;
+        while(i<=num){
+            console.log(`${i}`);
+            i++;
+        }
+
+        // print first 10 even numbers using while loop
+        var i = 1, num = 20;
+        while(i<=num){
+            if(i%2 == 0){
+                console.log(`${i}`);
+            }
+            i++;
+        }
+
+        //Sum of first 10 natural numbers
+        var sum = 0, num = 1, limit = 10;
+        while(num <= limit){
+            sum+=num;
+            num++;
+        }
+        console.log(`The Sum of first 10 numbers is: ${sum}`);
+
+        var num = 47567, reverse = 0, digit = 0;
+        var isPalindrome = num;
+        console.log(`Original Number: ${num}`);
+        while(num > 0){
+            // digit = num % 10;
+            // reverse = reverse * 10 + digit;
+            // reverse *= 10 + num % 10;
+            reverse = reverse * 10 + num % 10;
+            num = Math.floor(num / 10);
+        }
+        console.log(`Reverse Number: ${reverse}`);
+        if(isPalindrome === reverse){
+            console.log(`${isPalindrome}  is a Palindrome Number. Because ${isPalindrome} is equal to ${reverse}`);
+        } else{
+            console.log(`${isPalindrome}  is a not a Palindrome Number. Because ${isPalindrome} is not equal to ${reverse}`);
+        }
+
+        // JS Star Pattern
+        // let n = 5;
+        // for (let i = 1; i <= n; i++) {
+        // let str = "* ";
+        // console.log(str.repeat(i));
+        // }
+
+        //Left Triangle
+        var num = 5;
+        var pattern = "";    //pattern string
+        if (num > 1) {      //no star pattern for 0 or negative numbers.
+            for (var i = 1; i <= num; i++) {    //first 'for loop' for horizontal lines
+                for (var j = 1; j <= i; j++) {      //second 'for loop' to print star
+                    pattern += "* ";    //adding * to pattern string
+                }
+                pattern += "\n";    //new line after row completion
+            }
+            console.log(pattern);   //printing star to console
+        }
+        else {
+            console.log("Number must be greater than 1 to print star pattern.");
+        }
+
+        //Downward Left Triangle
+        var num = 5;
+        var pattern = "";    //pattern string
+        if (num > 1) {      //no star pattern for 0 or negative numbers.
+            for (var i = 1; i <= num; i++) {    //first 'for loop' for horizontal lines
+                for (var j = 0; j <= (num-i); j++) {    //second 'for loop' for opposite pattern; see loop condition
+                    pattern += "* ";
+                }
+                pattern += "\n";    //new line after row completion
+            }
+            console.log(pattern);   //printing star to console
+        }
+        else {
+            console.log("Number must be greater than 1 to print star pattern.");
+        }
+
+        //Right triangle
+        var num = 5;
+        var pattern = "";    //pattern string
+        if (num > 1) {      //no star pattern for 0 or negative numbers.
+            for (var i = 1; i <=num; i++) {    //first 'for loop' for horizontal lines
+                for (var j = 1; j <= (num-i); j++) {    //second 'for loop' to add 'spaces' before pattern
+                    pattern += "  ";
+                }
+
+                for (var k = 1; k <= i; k++) {      //third 'for loop' to add * to pattern string
+                    pattern += "* ";
+                }
+                pattern += "\n";    //new line after row completion
+            }
+            console.log(pattern);   //printing star to console
+        }
+        else {
+            console.log("Number must be greater than 1 to print star pattern.");
+        }
+
+        //Downward right Triangle
+        var num = 5;
+        var pattern = "";    //pattern string
+        if (num > 1) {      //no star pattern for 0 or negative numbers.
+            for (var i = num; i >=1; i--) {     //first 'for loop' for horizontal lines and reversed pattern
+                for (var j = 1; j <= (num-i); j++) {    //second 'for loop' to add 'spaces' before pattern
+                    pattern += "  ";
+                }
+
+                for (var k = 1; k <= i; k++) {      //third 'for loop' to add * to pattern string
+                    pattern += "* ";
+                }
+                pattern += "\n";    //new line after row completion
+            }
+            console.log(pattern);   //printing star to console
+        }
+        else {
+            console.log("Number must be greater than 1 to print star pattern.");
+        }
+
+        //Pyramid
+        var num = 5;
+        var pattern = "";    //pattern string
+        if (num > 1) {      //no star pattern for 0 or negative numbers.
+            for (var i = 1; i <= num; i++) {     //first 'for loop' for horizontal lines
+                for (var j = 1; j <= (num - i); j++) {    //second 'for loop' to add 'spaces' before pattern
+                    pattern += "  ";
+                }
+                for (var k = 1; k <= ((2 * i) - 1); k++) {      //third 'for loop' to add * to pattern string
+                    pattern += "* ";
+                }
+                pattern += "\n";    //new line after row completion
+            }
+            console.log(pattern);   //printing star to console
+        }
+        else {
+            console.log("Number must be greater than 1 to print star pattern.");
+        }
+
+        //Downward Pyramid
+        var num = 5;
+        var pattern = "";    //pattern string
+        if (num > 1) {      //no star pattern for 0 or negative numbers.
+            for (var i = num; i >=1; i--) {    //first 'for loop' for horizontal lines  and reversed pattern
+                for (var j = 1; j <= (num - i); j++) {      //second 'for loop' to add 'spaces' before pattern
+                    pattern += "  ";
+                }
+                for (var k = 1; k <= ((2 * i) - 1); k++) {      //third 'for loop' to add * to pattern string
+                    pattern += "* ";
+                }
+                pattern += "\n";    //new line after row completion
+            }
+            console.log(pattern);   //printing star to console
+        }
+        else {
+            console("Number must be greater than 1 to print star pattern.");
+        }
+
+        var number =12345, sum = 0;
+        while(number > 0){
+            sum = sum + number % 10;
+            number = Math.floor(number / 10);
+        }
+        console.log(`Sum of individual digit is: ${sum}`);
+
+        var Number = 3, fact = 1, i = 1;
+        while(i <= Number){
+            fact = fact * i;
+            i++;
+        }
+        console.log(`Factorial of ${Number}: ${fact}`);
+
+        //do-while loop
+        var limit = 5, i = 1;
+        do{
+            console.log(`${i}`);
+            limit++;
+            i++;
+        } while(limit <+ 10);
+    </script>
+</body>
+</html>
