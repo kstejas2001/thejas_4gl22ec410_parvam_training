@@ -1,0 +1,58 @@
+								 --UPLOAD YOUR FILES TO GITHUB USING GIT--
+
+Steps to Upload the Updated Folders or Files to GitHub
+
+
+Step 1: Locate your working folder(where you can get upload to Github) or for example, in my case i am going to upload my updated "Travel" folder (located in my Desktop) to GitHub. So,
+	--> right-click in the "Travel" folder and select "Git Bash Here". 
+	--> If you are on Mac/Linux, open Terminal and navigate to the folder using:
+	Run:
+		- cd /path/to/travel (for ex: cd C:\Users\SUDEEP C G\Desktop\Travel).
+
+Step 2: Run the following command to check if Git is already initialized in your folder:
+	Run:
+		- git status	(If it says "fatal: not a git repository"), run:
+		- git init	(This initializes Git in the "Travel" folder.)
+
+Step 3: Add the Updated Files to Git:
+	Run:
+		- git add .	(This stages all updated files for commit.)
+
+Step 4: Commit the Changes:
+	Run:
+		- git commit -m "Updated travel project with new changes"	(Replace the message with a meaningful one.)
+
+Step 5: Push the Changes to GitHub:
+	
+	--> If you already linked your repository before, 
+	Run:
+		- git push origin main	(If your branch is master, use {git push origin master} instead.)
+
+	--> If you haven't linked your GitHub repo yet,
+	Run:
+		- git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git	(Replace YOUR_USERNAME and YOUR_REPOSITORY with your actual GitHub details.)
+		- git branch -M main
+		- git push -u origin main
+
+Done!
+Your updated "Travel" folder is now uploaded to GitHub.
+
+Another way to upload the projects:
+
+Step 1: Locate your working folder(where you can get upload to Github) or for example, in my case i am going to upload my updated "ParvaM Internship" folder (located in my Desktop) to GitHub. So,
+	--> right-click in the "Travel" folder and select "Git Bash Here".
+	Run: 
+		1. git clone "insert_a_link_from_git"	(ex: git clone "https://github.com/kstejas2001/thejas_4gl22ec410_parvam_training.git")
+		2. cd "folder_name"			(ex: cd thejas_4gl22ec410_parvam_training)
+		3. git status				(it will shows the updated in green colour or outdated files and folder in red colour)
+	--> If you see the red coloured files, for ex: the index.html are in red colour, 
+	Run:
+		4. git "add file_name"			(ex: git add index.html for a single file) or 
+
+	--> If you select multiple files at a time,
+	Run:
+		5. git add .				(it will select all the files to add locally. This stages all updated files for commit)
+		6. git commit -m "We are learned html basic"
+		7. git push origin main	(If your branch is master, use {git push origin master} instead. it will redirect to website for conformation, so click ok).
+Done!
+Your updated "html" inside the *ParvaM Internship* folder is now uploaded to GitHub.
