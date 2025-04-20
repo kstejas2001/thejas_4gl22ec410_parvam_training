@@ -1,0 +1,41 @@
+{% extends 'student_registration/menu.html' %}
+
+{% block title %}Student Registration List{% endblock title %}
+
+{% block content %}
+    <h1>List of Student Registration</h1>
+    <table class="table table-warning table-bordered border-1 table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">USN</th>
+            <th scope="col">Branch</th>
+            <th scope="col">Sem</th>
+            <th scope="col">Course</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Email ID</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for student in students %}
+          <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.usn }}</td>
+            <td>{{ student.branch }}</td>
+            <td>{{ student.sem }}</td>
+            <td>{{ student.course }}</td>
+            <td>{{ student.gender }}</td>
+            <td>{{ student.email_id }}</td>
+            <td>
+              <a href="{% url 'view' student.pk %}" class="btn btn-secondary btn-sm">View</a>
+              <a href="{% url 'update' student.pk %}" class="btn btn-warning btn-sm">Edit</a>
+              <a href="{% url 'delete' student.pk %}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+{% endblock %}

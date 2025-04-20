@@ -1,0 +1,58 @@
+{% extends 'student_registration/menu.html' %}
+
+{% block title %}View Registration{% endblock title %}
+
+{% block content %}
+    <h1 class="bg-secondary text-light text-center">Registration Details of {{student.name}}</h1>
+    <table class="table table-warning">
+        <tr>
+            <th>Name:</th>
+            <td>{{student.name}}</td>
+        </tr>
+        <tr>
+            <th>Age:</th>
+            <td>{{student.age}}</td>
+        </tr>
+        <tr>
+            <th>USN:</th>
+            <td>{{student.usn}}</td>
+        </tr>
+        <tr>
+            <th>Branch:</th>
+            <td>{{student.branch}}</td>
+        </tr>
+        <tr>
+            <th>Semester:</th>
+            <td>{{student.sem}}</td>
+        </tr>
+        <tr>
+            <th>Gender:</th>
+            <td>{{student.gender}}</td>
+        </tr>
+        <tr>
+            <th>Email ID:</th>
+            <td>{{student.email_id}}</td>
+        </tr>
+        <tr>
+            <th>Hobbies:</th>
+            <td>{{student.hobbies|join:", "}}</td>
+        </tr>
+        <tr>
+            <th>Address:</th>
+            <td>{{student.address}}</td>
+        </tr>
+        {% if student.profile_image %}
+        <tr>
+            <th>Profile Image:</th>
+            <td><img src="{{student.profile_image.url}}" class="img-thumbnail" width="200"></td>
+        </tr>
+        {% endif %}
+        {% if student.resume_pdf %}
+        <tr>
+            <th>Resume:</th>
+            <td><iframe src="{{student.resume_pdf.url}}"></iframe></td>
+            <!-- <td><a href="{{student.resume_pdf.url}}" target="_blank">Download PDF</a></td> -->
+        </tr>
+        {% endif %}
+    </table>
+{% endblock %}

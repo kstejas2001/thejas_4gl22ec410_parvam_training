@@ -1,0 +1,21 @@
+{% extends 'student_registration/menu.html' %}
+
+{% block title %}Delete Registration{% endblock title %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h1>Delete the Existing Student Registration</h1>
+    </div>
+    <div class="card-body">
+        <h2>Do you really want to delete the registration details of {{student.name}}?</h2>
+    </div>
+    <div class="card-footer">
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-success">Yes</button>
+            <a class="btn btn-danger" href="{% url 'list' %}">No</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
