@@ -1,0 +1,30 @@
+--> Django works on MVT where,
+"M" - Model, "V" - View, and "T" - Template
+
+	1. MODEL stands for takes care of data base part of a system(schema),
+	2. VIEW stands for logical part(BACKEND), and
+	3. TEMPLATE stands for design part(FRONT END)
+
+routes is navigate between route pages(URL)
+
+--> What is CRUD ?
+"C" - Create, "R" - Read, "U" - Update, "D" - Deleet
+	it means to create a data, or read a data, or update or delete the data
+
+In settings.py configures the data credentials and email config in secure place.
+
+In Django "http://127.0.0.1:8000/" -->is the local host(127.0.0.1) and port number(8000)
+
+
+
+-->To install the new application like "students" or "student_app" in "student_crud" folder follow the cmd below:
+
+	1. python manage.py startapp student_app	(it will create a new "student_app" folder in student_crud folder)
+	2. pip install mysqlclient	                (Beacause we work with database, it help us to connect with)
+
+	3. open the settings.py file under student_crud folder and add new line "student_app" under the "INSTALLED_APP" section and in the same file, scroll down to "DATA_BASES" and change it to student name, usn,age,like this.
+
+			------WE HAVE TO CREATE A NEW APP IN DJANGO--------
+Follows the steps below:
+
+1. 
